@@ -1,0 +1,202 @@
+/*Importación de Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+}
+
+section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 100%;
+}
+
+/*Estilos Navbar*/
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background: rosybrown;
+
+}
+
+header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .nav-logo .logo-text {
+    color: white;
+    font-size: 20px;
+}
+
+/**/
+.navbar .nav-menu {
+    display: flex;
+    /*Altura NavBar*/
+    gap: 10px;
+}
+
+.navbar .nav-menu .nav-link {
+    color: white;
+    padding: 10px 18px;
+    font-size: 16px;
+    transition: 0.3s ease;
+    border-radius: 20px;
+
+}
+
+.navbar .nav-menu .nav-link:hover {
+    color: rosybrown;
+    background: white;
+}
+
+.navbar :where(#menu-cerrar-button, #menu-abrir-button){
+    display: none;
+}
+
+/*Inicio Seccion Estilos*/
+.inicio-section {
+    background: rosybrown;
+    min-height: 100vh;
+}
+
+.inicio-section .section-content {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    justify-content: space-between;
+}
+
+.inicio-section .inicio-details .title {
+    font-size: 20px;
+    color: rosybrown;
+    font-family: "Roboto", sans-serif;
+}
+
+.inicio-section .inicio-details .subtitle {
+    margin-top: 8px;
+    max-width: 70%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.inicio-section .inicio-details .description {
+
+    max-width: 70%;
+    margin: 24px 0 40px;
+    font-size: 16px;
+}
+
+.inicio-section .inicio-details .button {
+    padding: 10px 26px;
+    color: rosybrown;
+    background: white;
+    border: 2px solid transparent;
+    font-weight: 50%;
+    border-radius: 20px;
+    transition: 0.3s ease;
+
+
+}
+
+.inicio-section .inicio-details .button:hover,
+.inicio-section .inicio-details .contact {
+    color: white;
+    border-color: white;
+    background: transparent;
+}
+
+.inicio-section .inicio-details .contact:hover {
+    color: rosybrown;
+    border-color: white;
+    background: white;
+}
+
+.inicio-section .inicio-details .buttons {
+    display: flex;
+    gap: 23px;
+
+
+}
+
+.inicio-section .inicio-image-wrapper {
+    max-width: 500px;
+    margin-right: 30px;
+}
+
+@media screen and (max-width:900px) {
+    :root {
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+    .navbar :where(#menu-cerrar-button, #menu-abrir-button) {
+        display: block;
+        font-size: var(--font-size-l);
+    }
+    .navbar #menu-cerrar-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+    .navbar #menu-abrir-button {
+        color: white;
+        right: 30px;
+        top: 30px;
+    }
+
+    .navbar .nav-menu {
+        display: block;
+        display: flex;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: white;
+        transition: left 0.8s ease;
+    }
+
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-link {
+        color: rosybrown;
+        display: block;
+        margin-top: 17px;
+        font-size: var(--font-size-l);
+    }
+}
