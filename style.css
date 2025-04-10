@@ -275,7 +275,7 @@ header {
 /* Hero principal */
 .hero {
     height: 100vh;
-    background-image: url("/image/ImagenInicio.jpg");
+    background-image: url("./image/ImagenInicio.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
